@@ -30,7 +30,40 @@ MTU:        : 1500
 
 ## EX2
 
-##
+## Déterminer l'adresse MAC de vos trois machines
+
+- show ip  MAC: 00:50:79:66:68:00
+
+
+## Définir une IP statique sur les trois machines
+
+- ip 10.1.1.3/24 
+
+# Effectuer des ping d'une machine à l'autre
+
+- PC1> ping 10.1.1.2
+84 bytes from 10.1.1.2 icmp_seq=1 ttl=64 time=3.757 ms
+84 bytes from 10.1.1.2 icmp_seq=2 ttl=64 time=3.057 ms
+84 bytes from 10.1.1.2 icmp_seq=3 ttl=64 time=3.231 ms
+84 bytes from 10.1.1.2 icmp_seq=4 ttl=64 time=4.317 ms
+84 bytes from 10.1.1.2 icmp_seq=5 ttl=64 time=7.090 ms
+
+PC2> ping 10.1.1.3
+84 bytes from 10.1.1.3 icmp_seq=1 ttl=64 time=4.149 ms
+84 bytes from 10.1.1.3 icmp_seq=2 ttl=64 time=3.525 ms
+84 bytes from 10.1.1.3 icmp_seq=3 ttl=64 time=4.252 ms
+84 bytes from 10.1.1.3 icmp_seq=4 ttl=64 time=3.608 ms
+84 bytes from 10.1.1.3 icmp_seq=5 ttl=64 time=3.870 ms
+
+PC1> ping 10.1.1.3
+84 bytes from 10.1.1.3 icmp_seq=1 ttl=64 time=3.904 ms
+84 bytes from 10.1.1.3 icmp_seq=2 ttl=64 time=4.299 ms
+84 bytes from 10.1.1.3 icmp_seq=3 ttl=64 time=4.089 ms
+84 bytes from 10.1.1.3 icmp_seq=4 ttl=64 time=5.049 ms
+84 bytes from 10.1.1.3 icmp_seq=5 ttl=64 time=3.994 ms
+
+
+
 
 
 
