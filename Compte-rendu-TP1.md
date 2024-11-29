@@ -39,7 +39,7 @@ MTU:        : 1500
 
 - ip 10.1.1.3/24 
 
-# Effectuer des ping d'une machine à l'autre
+## Effectuer des ping d'une machine à l'autre
 
 - PC1> ping 10.1.1.2
 84 bytes from 10.1.1.2 icmp_seq=1 ttl=64 time=3.757 ms
@@ -62,6 +62,13 @@ PC1> ping 10.1.1.3
 84 bytes from 10.1.1.3 icmp_seq=4 ttl=64 time=5.049 ms
 84 bytes from 10.1.1.3 icmp_seq=5 ttl=64 time=3.994 ms
 
+## EX3
+
+##  Donner un accès Internet à la machine dhcp.tp1.efrei
+
+- ping google.com
+
+##  Installer et configurer un serveur DHCP
 
 
 
