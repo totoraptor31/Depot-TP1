@@ -68,9 +68,37 @@ PC1> ping 10.1.1.3
 
 - ping google.com
 
+PING google.com (142.250.179.110) 56(84) bytes of data.
+64 bytes from par21s20-in-f14.1e100.net (142.250.179.110): icmp_seq=1 ttl=116 time=22.5 ms
+
 ##  Installer et configurer un serveur DHCP
 
+PC1> dhcp -r
+DORA
+PC1> show ip
 
+NAME        : PC1[1]
+IP/MASK     : 10.1.1.10/24
+GATEWAY     : 0.0.0.0
+DNS         :
+DHCP SERVER : 10.1.1.253
+DHCP LEASE  : 479, 600/300/525
+DOMAIN NAME : example.org
+MAC         : 00:50:79:66:68:00
+LPORT       : 20007
+RHOST:PORT  : 127.0.0.1:20008
+MTU         : 1500
+
+## DHCP spoofing
+
+### Configuration dnsmasq
+port=0
+interface=eth0
+dhcp-range=10.1.1.210,10.1.1.250,12h
+
+### Attribution de l'adresse IP par dnsmasq
+PC1> dhcp
+DDORA IP 10.1.1.246/24 DW 10.1.1.11
 
 
 
